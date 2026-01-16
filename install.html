@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WildHogs - Installationsguide</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a3a2e 0%, #2d5a4e 100%);
+            color: #333;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #1a3a2e 0%, #3d7a66 100%);
+            color: #d4af37;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .content {
+            padding: 40px;
+        }
+        .step {
+            margin-bottom: 30px;
+            border-left: 4px solid #3d7a66;
+            padding-left: 20px;
+        }
+        .step h2 {
+            color: #1a3a2e;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .step-number {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background: #3d7a66;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            font-weight: bold;
+        }
+        .step p {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 10px;
+        }
+        .code-block {
+            background: #f5f5f5;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 10px 0;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+            font-size: 0.9rem;
+        }
+        .warning {
+            background: #fff3cd;
+            border-left: 4px solid #e67e22;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .success {
+            background: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .checklist {
+            list-style: none;
+        }
+        .checklist li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .checklist li:before {
+            content: "✓ ";
+            color: #28a745;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .button-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+        .btn-primary {
+            background: #e67e22;
+            color: white;
+        }
+        .btn-primary:hover {
+            background: #d35400;
+        }
+        .btn-secondary {
+            background: #3d7a66;
+            color: white;
+        }
+        .btn-secondary:hover {
+            background: #2d5a4e;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏍️ WildHogs MC Klubb</h1>
+            <p>Installationsguide</p>
+        </div>
+        
+        <div class="content">
+            <div class="step">
+                <h2><span class="step-number">1</span> Förberedelser</h2>
+                <p>Se till att du har XAMPP eller motsvarande installerat och igång:</p>
+                <ul class="checklist">
+                    <li>Apache server är igång</li>
+                    <li>MySQL server är igång</li>
+                    <li>Projektet ligger i c:\xampp\htdocs\WildHogs\</li>
+                </ul>
+            </div>
+            
+            <div class="step">
+                <h2><span class="step-number">2</span> Automatisk installation</h2>
+                <p>Öppna denna sida och den gör ALLT åt dig:</p>
+                <ul class="checklist">
+                    <li>Gå till <strong>http://localhost/WildHogs/setup.php</strong></li>
+                    <li>Denna sida skapar:
+                        <ul style="margin-left: 20px; margin-top: 5px;">
+                            <li>✅ Databasen "wildhogs"</li>
+                            <li>✅ Alla tabeller (users, products, orders)</li>
+                            <li>✅ 4 testprodukter</li>
+                            <li>✅ Admin-användare (admin / adminklubben123)</li>
+                        </ul>
+                    </li>
+                    <li>Klicka bara och vänta!</li>
+                    <li>Om allt gick bra ser du "Installation slutförd!"</li>
+                </ul>
+                <div class="success">
+                    ✅ Databasen och admin-användare skapas automatiskt!
+                </div>
+            </div>
+            
+            <div class="step">
+                <h2><span class="step-number">3</span> Efter installationen</h2>
+                <p>Nu behöver du bara göra två saker:</p>
+                <ul class="checklist">
+                    <li>Skapa mappen <strong>images/</strong> för produktbilder
+                        <ul style="margin-left: 20px; margin-top: 5px;">
+                            <li>Högerklicka i WildHogs-mappen</li>
+                            <li>Ny → Mapp</li>
+                            <li>Namn: <strong>images</strong></li>
+                        </ul>
+                    </li>
+                    <li>Radera filen <strong>setup.php</strong> (inte längre behövd)</li>
+                </ul>
+            </div>
+            
+            <div class="step">
+                <h2><span class="step-number">4</span> Testa installationen</h2>
+                <p>Nu är allt klart! Testa webbplatsen:</p>
+                <ul class="checklist">
+                    <li>Gå till <strong>http://localhost/WildHogs</strong></li>
+                    <li>Du ska se startsidan med mörkgrönt tema</li>
+                    <li>Klicka på "Logga In" för att testa login-funktionen</li>
+                    <li>Registrera dig med ett testanvändarnamn</li>
+                    <li>Logga in igen</li>
+                    <li>Klicka på "WebShop" för att se testprodukterna</li>
+                </ul>
+                <div class="success">
+                    ✅ Grattis! Din webbplats är nu i drift!
+                </div>
+            </div>
+            
+            <div class="step">
+                <h2><span class="step-number">5</span> Logga in som admin</h2>
+                <p>För att kunna lägga till egna produkter:</p>
+                <ul class="checklist">
+                    <li>Gå till <strong>http://localhost/WildHogs/login.php</strong></li>
+                    <li>Användarnamn: <strong>admin</strong></li>
+                    <li>Lösenord: <strong>adminklubben123</strong></li>
+                    <li>Du ska se "Admin Panel" i navbaren</li>
+                    <li>Klicka på "Admin Panel" för att lägga till produkter</li>
+                </ul>
+            </div>
+            
+            <div style="background: #f0f0f0; padding: 20px; border-radius: 5px; margin-top: 30px;">
+                <h3>📁 Filöversikt</h3>
+                <p><strong>Huvudfiler:</strong></p>
+                <ul class="checklist">
+                    <li><strong>index.php</strong> - Startsida</li>
+                    <li><strong>webshop.php</strong> - WebShop med produkter och varukorg</li>
+                    <li><strong>login.php</strong> - Inloggning och registrering</li>
+                    <li><strong>admin.php</strong> - Admin-panel för produkthantering</li>
+                    <li><strong>checkout.php</strong> - Kassasida</li>
+                    <li><strong>style.css</strong> - Mörkgrönt tema-stilmall</li>
+                    <li><strong>config.php</strong> - Databaskonfiguration</li>
+                </ul>
+                <p style="margin-top: 15px;"><strong>Mappar:</strong></p>
+                <ul class="checklist">
+                    <li><strong>includes/</strong> - nav.php och footer.php</li>
+                    <li><strong>images/</strong> - Produktbilder (skapa denna själv)</li>
+                </ul>
+            </div>
+            
+            <div class="button-group" style="justify-content: center; margin-top: 30px;">
+                <a href="http://localhost/WildHogs" class="btn btn-primary">Gå till startsida</a>
+                <a href="http://localhost/phpmyadmin" class="btn btn-secondary">Öppna phpMyAdmin</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

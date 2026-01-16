@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WildHogs - Snabb Guide</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a3a2e 0%, #2d5a4e 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #1a3a2e 0%, #3d7a66 100%);
+            color: #d4af37;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .content {
+            padding: 40px;
+        }
+        .step-container {
+            background: #f5f5f5;
+            border-left: 4px solid #3d7a66;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        .step-number {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: #3d7a66;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-right: 15px;
+        }
+        .step-title {
+            font-size: 1.3rem;
+            color: #1a3a2e;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .step-content {
+            color: #666;
+            line-height: 1.8;
+            margin-left: 55px;
+            margin-top: -40px;
+        }
+        .url {
+            display: inline-block;
+            background: #e67e22;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-weight: bold;
+            text-decoration: none;
+            margin: 10px 0;
+            transition: all 0.3s;
+        }
+        .url:hover {
+            background: #d35400;
+            transform: scale(1.05);
+        }
+        .info-box {
+            background: #d1ecf1;
+            border-left: 4px solid #17a2b8;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+            color: #0c5460;
+        }
+        .success-box {
+            background: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+            color: #155724;
+        }
+        .links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 2px solid #eee;
+        }
+        .link-card {
+            background: white;
+            border: 2px solid #3d7a66;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+        .link-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        .link-card a {
+            display: block;
+            color: #3d7a66;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+        .link-card a:hover {
+            color: #e67e22;
+        }
+        .link-card p {
+            color: #999;
+            font-size: 0.85rem;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏍️ WildHogs MC Klubb</h1>
+            <p>Snabb Installationsguide</p>
+        </div>
+        
+        <div class="content">
+            <div class="info-box">
+                <strong>ℹ️ Denna sida visar dig den enklaste vägen till en körande webbplats!</strong>
+            </div>
+            
+            <div class="step-container">
+                <span class="step-number">1️⃣</span>
+                <div class="step-title">Starta XAMPP</div>
+                <div class="step-content">
+                    <p>Se till att både Apache och MySQL är igång (gröna knappar)</p>
+                </div>
+            </div>
+            
+            <div class="step-container">
+                <span class="step-number">2️⃣</span>
+                <div class="step-title">Automatisk Installation</div>
+                <div class="step-content">
+                    <p>Klicka här för att installera allt automatiskt:</p>
+                    <a href="setup.php" class="url">🚀 Kör Automatisk Installation</a>
+                    <p style="margin-top: 15px;"><strong>Denna sida skapar:</strong></p>
+                    <ul style="margin-left: 20px; margin-top: 5px;">
+                        <li>✅ Databasen "wildhogs"</li>
+                        <li>✅ Alla tabeller</li>
+                        <li>✅ Testprodukter</li>
+                        <li>✅ Admin-användare (admin / adminklubben123)</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="success-box">
+                <strong>✅ Du ska se grön status "Installation slutförd!" när det är klart</strong>
+            </div>
+            
+            <div class="step-container">
+                <span class="step-number">3️⃣</span>
+                <div class="step-title">Skapa images-mapp</div>
+                <div class="step-content">
+                    <p>Skapa en ny mapp kallad <strong>"images"</strong> i WildHogs-mappen</p>
+                    <p style="margin-top: 10px;">Det är här du kan lagra produktbilder senare.</p>
+                </div>
+            </div>
+            
+            <div class="step-container">
+                <span class="step-number">4️⃣</span>
+                <div class="step-title">Radera setup.php</div>
+                <div class="step-content">
+                    <p>När installationen är klar, radera filen <strong>setup.php</strong></p>
+                    <p style="margin-top: 10px;">Den är inte längre behövd och är en säkerisk.</p>
+                </div>
+            </div>
+            
+            <div class="step-container">
+                <span class="step-number">5️⃣</span>
+                <div class="step-title">Starta Webbplatsen</div>
+                <div class="step-content">
+                    <p>Gå nu till din nya webbplats:</p>
+                    <a href="index.php" class="url">🏠 Gå till Startsida</a>
+                </div>
+            </div>
+            
+            <div class="step-container">
+                <span class="step-number">6️⃣</span>
+                <div class="step-title">Logga in som Admin</div>
+                <div class="step-content">
+                    <p>Logga in för att kunna lägga till produkter:</p>
+                    <a href="login.php" class="url">🔑 Gå till Login</a>
+                    <ul style="margin-left: 0; margin-top: 10px;">
+                        <li><strong>Användarnamn:</strong> admin</li>
+                        <li><strong>Lösenord:</strong> adminklubben123</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="info-box">
+                <strong>💡 Tip:</strong> När du är inloggad som admin kan du klicka på "Admin Panel" i navbaren för att lägga till egna produkter!
+            </div>
+            
+            <h2 style="margin-top: 40px; margin-bottom: 20px; color: #1a3a2e;">📚 Användbara Länkar</h2>
+            
+            <div class="links">
+                <div class="link-card">
+                    <a href="index.php">🏠 Startsida</a>
+                    <p>Se webbplatsen</p>
+                </div>
+                <div class="link-card">
+                    <a href="webshop.php">🛒 WebShop</a>
+                    <p>Se produkter och varukorg</p>
+                </div>
+                <div class="link-card">
+                    <a href="login.php">🔑 Login</a>
+                    <p>Logga in / Registrera</p>
+                </div>
+                <div class="link-card">
+                    <a href="admin.php">⚙️ Admin Panel</a>
+                    <p>Lägg till produkter</p>
+                </div>
+                <div class="link-card">
+                    <a href="http://localhost/phpmyadmin" target="_blank">🗄️ phpMyAdmin</a>
+                    <p>Hantera databasen</p>
+                </div>
+                <div class="link-card">
+                    <a href="README.md" target="_blank">📖 Dokumentation</a>
+                    <p>Läs mer</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
